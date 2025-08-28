@@ -27,11 +27,18 @@ export function Web3Provider({ children }) {
     // load contracts from contracts.json (injected by deploy script)
     const factoryData = getContractData("LoanFactory");
     const compData = getContractData("ComplianceRegistry");
-    const factory = new ethers.Contract(factoryData.address, factoryData.abi, signer);
+    
     const compliance = new ethers.Contract(compData.address, compData.abi, signer);
 
     setFactoryContract(factory);
     setComplianceContract(compliance);
+
+    const factory = new ethers.Contract(
+       "0xPUsqB-NMpMw13juXkSmpD",
+      loanFactoryABI,
+       signer
+);
+
   }
 
   return (
