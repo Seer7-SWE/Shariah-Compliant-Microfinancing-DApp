@@ -19,8 +19,8 @@ contract ComplianceRegistry is AccessControl {
     event LoanVerified(uint256 indexed loanId, address indexed scholar, bool approved, string noteCID);
 
     constructor(address admin) {
-        _setupRole(DEFAULT_ADMIN_ROLE, admin);
-        _setupRole(SCHOLAR_ROLE, admin);
+        _grantRole(DEFAULT_ADMIN_ROLE, admin);
+        _grantRole(SCHOLAR_ROLE, admin);
     }
 
     function setSector(uint32 code, bool ok) external onlyRole(DEFAULT_ADMIN_ROLE) {

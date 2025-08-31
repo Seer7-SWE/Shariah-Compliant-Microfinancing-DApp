@@ -15,7 +15,7 @@ contract LoanFactory is AccessControl {
 
     constructor(address _compliance) {
         compliance = ComplianceRegistry(_compliance);
-        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 
     function createLoan(

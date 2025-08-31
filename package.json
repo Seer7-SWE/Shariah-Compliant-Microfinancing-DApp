@@ -12,6 +12,7 @@
     "hardhat": "hardhat"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
     "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "ethers": "^5.8.0",
@@ -26,6 +27,7 @@
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
+    "dotenv": "^17.2.1",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
